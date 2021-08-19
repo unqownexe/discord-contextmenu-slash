@@ -15,7 +15,7 @@ Botun OAuth2 ayarlarını yapmayı unutma.
 Node Sürümünüzün v16 olması gerektiğini unutma.
         
 Kullanım videosu;
-![video](https://cdn.discordapp.com/attachments/798849910203875388/877999855233040435/Tanitim.mp4)
+<a href="https://cdn.discordapp.com/attachments/798849910203875388/877999855233040435/Tanitim.mp4">Video</a>
 
 
 ## İletişim & Yardım İçin
