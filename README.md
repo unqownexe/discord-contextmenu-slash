@@ -9,10 +9,10 @@ Botunu kurmadan ve davet ederken şunlara dikkat etmelisin;
 
 
 ## [!] ÇOK ÖNEMLİ [!]
-Botun Intent'lerini açmayı unutma.
-Mongo URL Bağlantısını ayarlardan doğru girmeyi unutma.
-Botun OAuth2 ayarlarını yapmayı unutma.
-Node Sürümünüzün v16 olması gerektiğini unutma.
+Botun Intent'lerini açmayı unutma.<br>
+Mongo URL Bağlantısını ayarlardan doğru girmeyi unutma.<br>
+Botun OAuth2 ayarlarını yapmayı unutma.<br>
+Node Sürümünüzün v16 olması gerektiğini unutma.<br>
         
 Kullanım videosu;
 <a href="https://cdn.discordapp.com/attachments/798849910203875388/877999855233040435/Tanitim.mp4">Video</a>
