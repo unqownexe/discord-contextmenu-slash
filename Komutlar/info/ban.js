@@ -20,13 +20,14 @@ module.exports = {
         interaction.followUp({ embeds: [new MessageEmbed().setAuthor(user.tag, user.avatarURL({dynamic: true})).setDescription(`${user} kullanıcısı ${interaction.user} tarafından yasaklandı.`)
         .setImage(`https://media.giphy.com/media/JWj4kJrSOzeU27jGI4/giphy.gif`).setColor("RED")]})
       
-
+        database.add(`cezaid`, 1)
+        let veri = database.get(`cezaid`) || 1
         let channel = interaction.guild.channels.cache.get(client.config.logs.mutelog)
         let embed = new MessageEmbed().setAuthor(client.config.embed.sunucuAdı, interaction.guild.iconURL({dynamic: true}))
-        .setDescription(`${user} kullanıcısı sunucudan ${interaction.user} tarafından yasaklandı.`)
+        .setDescription(`${user} kullanıcısı sunucudan ${interaction.user} tarafından yasaklandı.\nCeza ID: ${ceza}`)
         .setFooter(client.config.embed.authorTag)
         .setColor("RED")
         .setImage(`https://media.giphy.com/media/JWj4kJrSOzeU27jGI4/giphy.gif`)
-        channel.send({ embeds: [embed]})
+        channel.send({ embeds: [embed]})    
     }
 };
