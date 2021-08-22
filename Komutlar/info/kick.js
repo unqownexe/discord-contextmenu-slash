@@ -1,7 +1,7 @@
 const { Client, ContextMenuInteraction, MessageEmbed } = require("discord.js");
 const moment = require('moment')
 moment.locale("tr");
-
+const database = require("quick.db")
 module.exports = {
     name: "Kick",
     description: "Kullanıcıyı kicklersiniz.",
@@ -20,10 +20,11 @@ module.exports = {
         interaction.followUp({ embeds: [new MessageEmbed().setAuthor(user.tag, user.avatarURL({dynamic: true})).setDescription(`${user} kullanıcısı ${interaction.user} tarafından atıldı.`)
         .setColor("RED").setImage(`https://media.giphy.com/media/JWj4kJrSOzeU27jGI4/giphy.gif`)]})
         
-
+        database.add(`cezaid`, 1)
+        let veri = database.get(`cezaid`) || 1
         let channel = interaction.guild.channels.cache.get(client.config.logs.mutelog)
         let embed = new MessageEmbed().setAuthor(client.config.embed.sunucuAdı, interaction.guild.iconURL({dynamic: true}))
-        .setDescription(`${user} kullanıcısı sunucudan ${interaction.user} tarafından atıldı.`)
+        .setDescription(`${user} kullanıcısı sunucudan ${interaction.user} tarafından atıldı.\nCeza ID: ${ceza}`)
         .setFooter(client.config.embed.authorTag)
         .setColor("RED")
         .setImage(`https://media.giphy.com/media/JWj4kJrSOzeU27jGI4/giphy.gif`)
