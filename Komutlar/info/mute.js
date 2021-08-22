@@ -21,7 +21,7 @@ module.exports = {
         const user = await interaction.guild.members.cache.get(interaction.targetId)
         interaction.followUp({ content: `<:muted:868383706254041108> <@${user.id}> kullanıcısı susturuldu.`})
         user.roles.add(client.config.roles.muted)
-        let end = Date.now() + ms("10 seconds") 
+        let end = Date.now() + ms("30 minutes") 
 
         database.set(user.id, { 
             end: end,
@@ -31,10 +31,12 @@ module.exports = {
             moderatorAvatarURL: interaction.member.user.displayAvatarURL({ dynamic: true }),
             reason: "Spam / Flood"
             });
+            database.add(`cezaid`, 1)
+            let veri = database.get(`cezaid`) || 1
 
         let channel = interaction.guild.channels.cache.get(client.config.logs.mutelog)
         let embed = new MessageEmbed().setAuthor(client.config.embed.sunucuAdı, interaction.guild.iconURL({dynamic: true}))
-        .setDescription(`${user} kullanıcısı metin kanallarında ${interaction.user} tarafından **30 dakika** boyunca susturulmuştur.\n\nMute Atılış Tarihi: \`${moment(Date.now()).format("LLL")}\`\nMute Bitiş Tarihi: \`${moment(Date.now() + ms("30m")).format("LLL")}\``)
+        .setDescription(`${user} kullanıcısı metin kanallarında ${interaction.user} tarafından **30 dakika** boyunca susturulmuştur.\n\nMute Atılış Tarihi: \`${moment(Date.now()).format("LLL")}\`\nMute Bitiş Tarihi: \`${moment(Date.now() + ms("30m")).format("LLL")}\`\nCeza ID: ${ceza}`)
         .setFooter(client.config.embed.authorTag)
         .setColor("RANDOM")
         channel.send({ embeds: [embed]})
