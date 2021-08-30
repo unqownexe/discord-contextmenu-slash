@@ -15,26 +15,11 @@ let veri = database.get("firstsetup") || false
 if(veri == true){
 }else{
     console.log("Botun Intent'lerini açmayı unutma.")
-        console.log("Mongo URL Bağlantısını ayarlardan doğru girmeyi unutma.")
         console.log("Botun OAuth2 ayarlarını yapmayı unutma.")
         console.log("Node Sürümünüzün v16 olması gerektiğini unutma.")
         console.log("Bilgi / İletişim: https://unqown.codes/iletisim")
 }
-mongoose.connect(client.config.mongoURL, { useNewUrlParser: true, useUnifiedTopology: true }).then(console.log(`
 
-ooo        ooooo                                                oooooooooo.   oooooooooo.  
-\`88.       .888'                                                \`888'   \`Y8b  \`888'   \`Y8b 
- 888b     d'888   .ooooo.  ooo. .oo.    .oooooooo  .ooooo.       888      888  888     888 
- 8 Y88. .P  888  d88' \`88b \`888P"Y88b  888' \`88b  d88' \`88b      888      888  888oooo888' 
- 8  \`888'   888  888   888  888   888  888   888  888   888      888      888  888    \`88b 
- 8    Y     888  888   888  888   888  \`88bod8P'  888   888      888     d88'  888    .88P 
-o8o        o888o \`Y8bod8P' o888o o888o \`8oooooo.  \`Y8bod8P'     o888bood8P'   o888bood8P'  
-                                       d"     YD                                           
-                                       "Y88888P'                                           
-                                                                                           
-
-                                       Giriş Yapıldı
-`))
 
 require("./handler")(client);
 
