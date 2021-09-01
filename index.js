@@ -1,9 +1,9 @@
-const { Client, Collection } = require("discord.js");
+const { Client, Collection, Intents } = require("discord.js");
 const mongoose = require('mongoose');
     const database = require('quick.db');
     const Discord = require("discord.js");
 const client = new Client({
-    intents: 32767, // ALL
+    intents: Object.keys(Intents.FLAGS), // ALL
 });
 module.exports = client;
 
