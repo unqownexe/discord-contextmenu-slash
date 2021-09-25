@@ -10,7 +10,6 @@ Botunu kurmadan ve davet ederken şunlara dikkat etmelisin;
 
 ## [!] ÇOK ÖNEMLİ [!]
 Botun Intent'lerini açmayı unutma.<br>
-Mongo URL Bağlantısını ayarlardan doğru girmeyi unutma.<br>
 Botun OAuth2 ayarlarını yapmayı unutma.<br>
 Node Sürümünüzün v16 olması gerektiğini unutma.<br>
         
