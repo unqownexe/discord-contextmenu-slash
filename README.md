@@ -19,5 +19,5 @@ Kullanım videosu;
 
 ## İletişim & Yardım İçin
 - Discord: [Unqown Exe#4214](https://discord.com/users/791255637920972801)
-- Website: [www.unqown.codes](https://www.unqown.xyz)
-- İletişim: [www.unqown.codes/iletisim](https://www.unqown.codes/iletisim)
+- Website: [www.unqown.xyz](https://www.unqown.xyz)
+- İletişim: [www.unqown.xyz/iletisim](https://www.unqown.xyz/iletisim)
